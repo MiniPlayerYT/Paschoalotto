@@ -1,0 +1,24 @@
+Como tocar músicas baixadas no PC no site (Vinil)
+====================================================
+
+1. Baixe o arquivo de música em formato .mp3 e coloque ele dentro desta
+   pasta "musicas/" (do lado deste arquivo).
+
+2. Abra o musicas.js e adicione uma linha no MINHA_BIBLIOTECA usando "file"
+   em vez de "id", com o nome EXATO do arquivo (maiúsculas/minúsculas
+   importam):
+
+     { file: 'nome-do-arquivo.mp3', name: 'Nome que vai aparecer no site' },
+
+   Exemplo, se você colocou aqui um arquivo chamado "minha-musica.mp3":
+
+     { file: 'minha-musica.mp3', name: 'Artista - Minha Música' },
+
+3. Pronto. Essa música passa a aparecer na aba "Manual" da Sua Biblioteca
+   e também na busca do site, tocando direto do seu PC — sem depender de
+   internet nem do YouTube.
+
+Observação: isso só funciona rodando o site por um servidor local (ex:
+"python -m http.server" na pasta do projeto) ou publicado num host — abrir
+o index.html direto como arquivo (file://) não consegue carregar os áudios
+dessa pasta por restrição de segurança do navegador.
